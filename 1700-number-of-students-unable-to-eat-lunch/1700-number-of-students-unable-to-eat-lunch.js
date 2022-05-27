@@ -15,12 +15,10 @@ var countStudents = function(students, sandwiches) {
             else {
                 students.unshift(students.pop())
             }
-            
         }
         if(!foundMatch){
                 return students.length
             }
-        
     }
     return students.length
 };
