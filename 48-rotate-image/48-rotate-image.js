@@ -1,26 +1,30 @@
 /**
  * @param {number[][]} matrix
  * @return {void} Do not return anything, modify matrix in-place instead.
- [
-    [1][2][3] 
-    [4][5][6]
-    [7][8][9]
- ]
  
  */
 var rotate = function(matrix) {
-    let tempArray = [];
-    for(let i = 0; i < matrix.length; i++){
-        for(let j = 0; j < matrix.length; j++){
-            tempArray.push(matrix[i][j])
+    function rotate(m){
+        transpose(m)
+        reflect(m)
+    }
+    function transpose(m){
+        for(let i = 0; i < m.length; i++){
+            for(let j = i + 1; j < m.length; j++){
+                let temp = m[j][i]
+                m[j][i] = m[i][j]
+                m[i][j] = temp
+            }
         }
     }
-    console.log(tempArray)
-    let arrayCounter = 0;
-    for(let i = matrix.length - 1; i >= 0; i--){ //col 3
-        for(let j = 0; j < matrix.length; j++){ //row 0
-            matrix[j][i] = tempArray[arrayCounter]
-            arrayCounter++
+    function reflect(m){
+        for(let i = 0; i < m.length; i++){
+            for(let j = 0; j < Math.floor(m.length / 2); j++){
+                let temp = m[i][j]
+                m[i][j]  = m[i][m.length -j - 1]
+                m[i][m.length -j - 1] = temp
+            }
         }
     }
+    rotate(matrix)
 };
