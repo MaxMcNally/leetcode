@@ -28,7 +28,6 @@ var addTwoNumbers = function(l1, l2) {
         let sum = value2 + value1 + carry
         carry = sum >= 10 ? 1 : 0
         sum = sum >= 10 ? sum % 10 : sum; 
-        console.log("Sum",sum)
         current.next = new ListNode(sum)
         current = current.next
     }
