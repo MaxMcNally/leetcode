@@ -4,7 +4,6 @@
  */
 var toGoatLatin = function(sentence) {
     let s = sentence.split(" ")
-    let vowels = ["a", "e", "i", "o", "u"]
     let aCounter = 1
     let result = []
     for(let word of s){
