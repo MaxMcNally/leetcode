@@ -6,8 +6,8 @@ var runningSum = function(nums) {
     let sums = [];
     let last = 0;
     for(let i = 0; i < nums.length; i++){
-        sums.push(nums[i]+last)
-        last = sums[i]
+        nums[i] = nums[i]+last
+        last = nums[i]
     }
-    return sums
+    return nums
 };
