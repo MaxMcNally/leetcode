@@ -8,7 +8,7 @@ var toGoatLatin = function(sentence) {
     let aCounter = 1
     let result = []
     for(let word of s){
-        if(vowels.indexOf(word[0].toLowerCase()) > -1){
+        if((/^[aeiou]$/i).test(word[0].toLowerCase())){
             word = word += "ma"
         }
         else {
