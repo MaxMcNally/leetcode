@@ -9,6 +9,5 @@ var runningSum = function(nums) {
         sums.push(nums[i]+last)
         last = sums[i]
     }
-    console.log(sums)
     return sums
 };
