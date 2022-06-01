@@ -3,11 +3,6 @@
  * @param {number} numRows
  * @return {string}
  */
-
-/*
-    for each row, jumps are [((N*2)-2) - 2 * row , (N*2)-2]
-    
-*/
 var convert = function(s, numRows) {
     if(numRows >= s.length || numRows === 1){
         return s
