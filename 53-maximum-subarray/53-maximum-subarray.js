@@ -3,8 +3,14 @@
  * @return {number}
  */
 var maxSubArray = function(nums) {
-    for (let i = 1; i < nums.length; i++){
-        nums[i] = Math.max(nums[i], nums[i] + nums[i - 1]);
+    let maxSub = nums[0];
+    let curSum = 0;
+    for(let num of nums){
+        if(curSum < 0){
+            curSum = 0
+        }
+        curSum += num
+        maxSub = Math.max(maxSub,curSum)
     }
-    return Math.max(...nums);
+    return maxSub
 };
