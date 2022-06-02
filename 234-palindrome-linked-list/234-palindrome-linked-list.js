@@ -16,6 +16,5 @@ var isPalindrome = function(head) {
         values.push(head.val)
         head = head.next
     }
-    console.log(values)
     return values.join("") === values.reverse().join("")
 };
