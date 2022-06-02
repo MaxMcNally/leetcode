@@ -8,6 +8,7 @@ var fib = function(n) {
     if(n === 1 || n === 0){
         return n
     }
+    console.log(memo)
     let one,two
     if(memo[n - 1]){
         one = memo[n - 1]
