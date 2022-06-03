@@ -13,7 +13,6 @@
  */
 var getIntersectionNode = function(headA, headB) {
     let [listA,listB] = evenListStart(headA,headB);
-    console.log(listA,listB)
     while(listA && listB){
         if(listA === listB){
             return listA
