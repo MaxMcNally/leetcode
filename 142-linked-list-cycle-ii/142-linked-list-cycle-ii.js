@@ -40,10 +40,8 @@ var detectCycle = function(head){
     if(!isCyclic){
         return null
     }
-    //rest slow pointer to start
     slow = head
     while(slow !== fast){
-        console.log(slow.val,fast.val)
         slow = slow.next;
         fast = fast.next;
     }
