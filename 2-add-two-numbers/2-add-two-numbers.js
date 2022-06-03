@@ -31,7 +31,7 @@ var addTwoNumbers = function(l1, l2) {
         current.next = new ListNode(sum)
         current = current.next
     }
-    let node = new ListNode()
+    
 
     if (carry > 0) {
         current.next = new ListNode(carry);
