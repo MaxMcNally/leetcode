@@ -9,9 +9,7 @@ var findKthPositive = function(arr, k) {
         nums.push(i)
     }
     for(let j = 0; j < arr.length; j++){
-        console.log("Removing", arr[j])
         nums.splice(nums.indexOf(arr[j]),1)
-        console.log(nums)
     }
     return nums[k-1]
     
