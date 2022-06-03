@@ -6,25 +6,6 @@
  * }
  */
 
-/**
- * @param {ListNode} head
- * @return {ListNode}
-//v1
-var detectCycle = function(head) { 
-    let node = head;
-    let nodeSet = new Set()
-    while(node){
-        if(nodeSet.has(node)){
-            return node
-        }
-        nodeSet.add(node)
-        node = node.next
-    }
-    return null
-};
-
- */
-
 var detectCycle = function(head){
     let slow = head;
     let fast = head;
