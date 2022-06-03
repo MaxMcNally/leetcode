@@ -9,9 +9,8 @@
 /**
  * @param {ListNode} head
  * @return {ListNode}
- */
-var detectCycle = function(head) {
-    
+//v1
+var detectCycle = function(head) { 
     let node = head;
     let nodeSet = new Set()
     while(node){
@@ -23,3 +22,30 @@ var detectCycle = function(head) {
     }
     return null
 };
+
+ */
+
+var detectCycle = function(head){
+    let slow = head;
+    let fast = head;
+    let isCyclic = false;
+    while(fast?.next?.next){
+        slow = slow.next;
+        fast = fast.next.next
+        if(slow === fast){
+            isCyclic = true;
+            break;
+        }
+    }
+    if(!isCyclic){
+        return null
+    }
+    //rest slow pointer to start
+    slow = head
+    while(slow !== fast){
+        console.log(slow.val,fast.val)
+        slow = slow.next;
+        fast = fast.next;
+    }
+    return slow
+}
