@@ -11,6 +11,9 @@ var intersect = function(nums1, nums2) {
         if(shorterArray.indexOf(longerArray[i]) > -1){
             result.push(longerArray[i]);
             shorterArray.splice(shorterArray.indexOf(longerArray[i]), 1);
+            if(shorterArray.length === 0){
+                return result
+            }
         }
     }
     return result;
