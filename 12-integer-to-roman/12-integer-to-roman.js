@@ -5,12 +5,10 @@
 var intToRoman = function(num) {
     let str = ''
     let numberArray = num.toString().split('').reverse()
-    console.log(numberArray)
     
     let thousands = numberArray[3]
     if(thousands){
         str = "M".repeat((thousands))
-        console.log(str)
     }
     
     let hundreds = numberArray[2]
@@ -27,7 +25,6 @@ var intToRoman = function(num) {
         else {
             str = str + "C".repeat(parseInt(hundreds))
         }
-        console.log(str)
     }
     
     let tens = numberArray[1]
@@ -44,7 +41,6 @@ var intToRoman = function(num) {
         else {
             str = str + 'X'.repeat(parseInt(tens))
         }
-        console.log(str)
     }
     let ones = numberArray[0]
     if(ones){
@@ -60,7 +56,6 @@ var intToRoman = function(num) {
         else {
             str = str + "I".repeat(parseInt(ones))
         }
-        console.log(str)
     }
     return str
 };
