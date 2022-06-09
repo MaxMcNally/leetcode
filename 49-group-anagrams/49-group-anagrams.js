@@ -12,6 +12,5 @@ var groupAnagrams = function(strs) {
         let ordered = strs[i].split("").sort().join()
         map[ordered] = map[ordered] ? map[ordered].concat([word]) : [word]
     }
-    console.log(map)
     return Object.values(map)
 };
