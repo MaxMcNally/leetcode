@@ -17,6 +17,5 @@ var intersect = function(nums1, nums2) {
             map[longerArray[i]]--
         }    
     }
-    console.log(map)
     return result;
 };
