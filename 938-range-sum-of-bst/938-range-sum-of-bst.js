@@ -13,19 +13,15 @@
  * @return {number}
  */
 var rangeSumBST = function(root, low, high) {
-    let result = []
+    let sum = 0;
     let stack = [root]
     while(stack.length > 0){
         const node = stack.pop()
         if(node.val && (node.val >= low && node.val <= high)) {
-            console.log(`Node val (${node.val}) is between ${high} and ${low}`)
-            result.push(node.val)
+            sum+=node.val
         }
-        
         if(node.left) stack.push(node.left)
         if(node.right) stack.push(node.right)
     }
-    return result.reduce((memo,num)=>{
-        return memo + num
-    },0)
+    return sum
 };
