@@ -18,7 +18,7 @@ var rangeSumBST = function(root, low, high) {
     while(stack.length > 0){
         const node = stack.pop()
         if(node.val && (node.val >= low && node.val <= high)) {
-            sum+=node.val
+            sum += node.val
         }
         if(node.left) stack.push(node.left)
         if(node.right) stack.push(node.right)
