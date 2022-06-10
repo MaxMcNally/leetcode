@@ -8,11 +8,6 @@ var singleNonDuplicate = function(nums) {
     let end = nums.length - 1
     let mid = Math.ceil((start + end)/2)
     while(nums.length > 1){
-        //[1, 1, 3]
-        // s
-        //             e
-        //       m
-        
         if(nums[mid + 1] === nums[mid]){
             nums.splice(mid, 2)
         }
