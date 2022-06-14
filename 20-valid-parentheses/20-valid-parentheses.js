@@ -15,12 +15,12 @@ var isValid = function(s) {
     const stack = [];
     let counter = 0;
     while(counter < s.length){
-        const letter = s.charAt(counter); //"["
+        const letter = s.charAt(counter); //"("
         if(complements[letter]){
             stack.push(complements[letter]) //stack = [")"]
         }
         else {
-            const last = stack[stack.length - 1] //"]"
+            const last = stack[stack.length - 1] //")"
             if(last && last === letter){
                 stack.pop()
             }
