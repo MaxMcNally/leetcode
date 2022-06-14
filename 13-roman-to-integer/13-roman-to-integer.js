@@ -19,6 +19,8 @@ function romanToInt(s) {
         M  : 1000
     }
     let result = 0;
+    
+    //"MCMXCIV"
     for(let i = 0; i < s.length; i++){
         if(s[i+1] && (values[s[i]+s[i+1]])){
             result += values[s[i]+s[i+1]];
