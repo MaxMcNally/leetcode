@@ -15,7 +15,6 @@ var findTheDifference = function(s, t) {
         else {
             if (map[t[j]] === 1) {
                 map[t[j]] = undefined
-            
             }
             else {
                 map[t[j]]--
