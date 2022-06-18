@@ -12,18 +12,19 @@
  */
 var maxDepth = function(root) {
     if(root === null) return 0
-    let depths = []
+    let max = 0
     function findDepth(node, current = 1){
-        
         if(node && (node.left || node.right)){
             findDepth(node.left, current+1)
             findDepth(node.right, current+1)
             return
         }
-        depths.push(current)
+        if(current > max){
+            max = current
+        }
         return
     }
     findDepth(root)
-    console.log(depths)
-    return Math.max(...depths)
+    
+    return max
 };
