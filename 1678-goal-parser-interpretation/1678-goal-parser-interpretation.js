@@ -3,5 +3,5 @@
  * @return {string}
  */
 var interpret = function(command) {
-    return command.replace(/\(\)/g,"o").replace(/\(al\)/g,"al")
+    return command.replaceAll("()","o").replaceAll("(al)","al")
 };
