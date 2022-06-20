@@ -9,9 +9,6 @@ var searchRange = function(nums, target) {
     let end = nums.length - 1
     
     while(start <= end){
-        //[2,2] target = 2
-        // ^ ^
-        //   ^
         let middle = Math.ceil((start + end)/2)
         if(nums[middle] === target){
             let right = 0
