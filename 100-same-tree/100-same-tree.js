@@ -8,7 +8,7 @@
  */
 /**
  * @param {TreeNode} p
- * @param {TreeNode} q    [1] [2,3]
+ * @param {TreeNode} q    
  * @return {boolean}
  */
 var isSameTree = function(p, q) {
@@ -17,5 +17,4 @@ var isSameTree = function(p, q) {
     return p.val === q.val 
        && isSameTree(p.left,q.left) 
         && isSameTree(p.right,q.right)
-    
 };
