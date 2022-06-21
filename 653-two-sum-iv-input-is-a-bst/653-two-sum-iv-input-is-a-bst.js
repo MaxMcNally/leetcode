@@ -12,13 +12,11 @@
  * @return {boolean}
  */
 var findTarget = function(root, k) {
-    
     let map = {}
     let queue = [root]
     while(queue.length > 0){ //[[1]]
         let node = queue.shift() //[1]
         if(map[node.val]){ 
-            console.log("???")
             return true
         }
         map[k - node.val] = true 
