@@ -17,8 +17,6 @@ function find(node, value){
         return true
     }
     return find(node.left,value) || find(node.right,value)
-    
-    
 }
 
 var lowestCommonAncestor = function(node, p, q) {
