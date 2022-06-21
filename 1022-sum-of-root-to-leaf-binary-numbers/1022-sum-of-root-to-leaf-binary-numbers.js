@@ -20,11 +20,9 @@ var sumRootToLeaf = function(root) {
         if(node.right){ 
             search(node.right, path + node.val)
         }
-        
     }
     search(root)
-    console.log(paths)
     return paths.reduce((memo,path)=>{
-        return memo + parseInt(path, 2) //from binary
+        return memo + parseInt(path, 2)
     },0)
 };
