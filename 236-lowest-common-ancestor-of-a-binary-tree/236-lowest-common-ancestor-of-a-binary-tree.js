@@ -20,12 +20,10 @@ function find(node, value){
 }
 
 var lowestCommonAncestor = function(node, p, q) {
-    let left = find(node.left, p.val) && find(node.left, q.val)
-    let right = find(node.right, p.val) && find(node.right, q.val)
-    if(left){
+    if(find(node.left, p.val) && find(node.left, q.val)){
         return lowestCommonAncestor(node.left, p, q)
     }
-    if(right){
+    if(find(node.right, p.val) && find(node.right, q.val)){
          return lowestCommonAncestor(node.right, p, q)
     }
     return node
