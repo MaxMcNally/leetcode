@@ -27,13 +27,11 @@ var deepestLeavesSum = function(root) {
         }
     }
     findMaxDepth(root)
-    console.log("Max Depth", currentMaxDepth)
     let dfs = (node, depth = 1) => {
         if((!node.left && !node.right)){
             if(depth === currentMaxDepth){
                 total += node.val
             }
-            
             return
         }
         if(node.left){
