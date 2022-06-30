@@ -13,14 +13,12 @@ var getAncestors = function(n, edges) {
     for(let i = 0; i < edges.length; i++){
         edgeMap[edges[i][0]].push(edges[i][1])
     }
-    console.log(edgeMap)
-    console.log(ancestorMap)
+
     for(let i = 0; i < n; i++){
         let q = [...edgeMap[i]]
         let seen = {}
         while(q.length > 0){
             let next = q.shift()
-            console.log(next)
             if(!seen[next]){
                 seen[next] = true
                 q.push(...edgeMap[next])
@@ -29,6 +27,5 @@ var getAncestors = function(n, edges) {
             
         }
     }
-    console.log(ancestorMap)
     return Array.from(Object.values(ancestorMap))
 };
