@@ -11,7 +11,7 @@
  */
 var mergeNodes = function(head) {
     let originalHead = head
-    let headCounter = originalHead.next
+    let headCounter = originalHead
     let counter = head
     let sum = 0
     while(counter){
@@ -31,6 +31,6 @@ var mergeNodes = function(head) {
         
     }
     
-    return originalHead.next.next
+    return originalHead.next
     
 };
