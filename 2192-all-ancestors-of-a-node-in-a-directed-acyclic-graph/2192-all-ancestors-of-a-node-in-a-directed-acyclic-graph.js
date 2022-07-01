@@ -5,6 +5,13 @@
  */
 var getAncestors = function(n, edges) {
     let edgeMap = {}
+    /*
+        {
+        0: [3,4]
+        1: [3]
+        2: [4,7]
+        }
+    */
     let ancestorMap = {}
     for(let i = 0; i < n; i++){
         edgeMap[i] = []
@@ -24,7 +31,6 @@ var getAncestors = function(n, edges) {
                 q.push(...edgeMap[next])
                 ancestorMap[next.toString()].push(i)
             }
-            
         }
     }
     return Array.from(Object.values(ancestorMap))
