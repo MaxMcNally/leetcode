@@ -43,15 +43,11 @@
 var depthSum = function(nestedList) {
     let multiplyByDepth = (item, depth = 1)=>{
         if(!item.isInteger()){
-            console.log("Item", item.getList())
-            console.log("Depth", depth)
             for(let number of item.getList()){
-                console.log(number)
                 multiplyByDepth(number, depth + 1)
             }  
         }
         else {
-            console.log("Item is num", item.getInteger())
             answer.push(item.getInteger() * depth)
         }
     }
