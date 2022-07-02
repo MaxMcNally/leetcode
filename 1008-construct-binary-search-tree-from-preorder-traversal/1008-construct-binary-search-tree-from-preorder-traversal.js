@@ -26,7 +26,6 @@ var bstFromPreorder = function(preorder) {
         right = []
         left = preorder
     }
-    console.log(left,right)
     if(left.length > 0){
         root.left = bstFromPreorder(left)
     }
