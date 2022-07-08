@@ -16,8 +16,8 @@ function checkDays(w,d,weights){
   }
   if(numDays <= d) return true
   return false
-
 }
+
 
 var shipWithinDays = function(weights, days) {
   
