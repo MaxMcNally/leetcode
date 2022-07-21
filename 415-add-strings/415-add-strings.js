@@ -20,7 +20,6 @@ var addStrings = function(num1, num2) {
     for(let i = longer.length - 1; i >= 0; i--){
         let sum = (shorter[i] !== undefined) ? longer.charCodeAt(i) + shorter.charCodeAt(i) : longer.charCodeAt(i)
         sum += carry
-        console.log(sum - 48)
         if(sum - 48 > 57){
             carry = 1
             sum = sum - 10
